@@ -1,39 +1,74 @@
-@import '../../style/variables';
+@import '../../style/variables.scss';
 .home {
+	font-family: 'Bellefair', serif;
 	height: 100vh;
+	width: 100vmax;
+	background-image: url('../../assets/home/background-home-desktop.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 100% auto;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	background: url('../../assets/home/background-home-desktop.jpg') no-repeat center/cover;
+	justify-content: space-around;
+	align-items: end;
 	&-wrapper {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+	}
+	&-title {
+		font-size: 150px;
+		color: $light;
+	}
+	&-subtitle {
+		font-size: 28px;
+		color: $medium;
+		&-sub {
+			font-size: 18px;
+			color: $medium;
+		}
 	}
 }
 .main-btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 274px;
-	height: 274px;
-	color: #000;
-	background-color: #fff;
-	border: 2px solid #fff;
+	width: 225px;
+	height: 225px;
+	color: $dark;
+	background-color: $light;
+	border: 2px solid $light;
 	border-radius: 50%;
 	font-size: 32px;
 	line-height: 36px;
+	background-color: $light;
+	cursor: pointer;
 }
-.main-btn:hover {
-	width: 450px;
-	height: 450px;
-	color: #000;
-	background-color: #fff;
+
+.main-btn-hover {
+	background-color: none;
+	border-radius: 50%;
+	width: 350px;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s all ease;
 }
+.main-btn-hover-active {
+	background-color: $medium;
+}
+
 .col-1 {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	width: 450px;
 	height: 380px;
+}
+.col-2 {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
 }

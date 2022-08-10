@@ -1,0 +1,53 @@
+@import '../../style/variables.scss';
+
+.nav {
+	position: fixed;
+	top: 40px;
+	font-family: 'Barlow Condensed', serif;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-left: 55px;
+	align-items: center;
+	&-wrapper {
+		background: url('../../assets/navigateMenu/bg.png');
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 830px;
+		height: 100px;
+		transition: 0.5s all ease;
+	}
+	&-line {
+		width: 470px;
+		height: 1px;
+	}
+	&-logo {
+		width: 50px;
+		height: 50px;
+	}
+	&-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		list-style-type: none;
+		color: $medium;
+		height: 98px;
+		cursor: pointer;
+		span {
+			margin-right: 10px;
+			color: $light;
+		}
+		border-bottom: none;
+	}
+	&-item:hover {
+		border-bottom: 1px solid $medium;
+	}
+	&-item-active {
+		border-bottom: 1px solid $light;
+	}
+}
