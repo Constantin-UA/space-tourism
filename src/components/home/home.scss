@@ -1,0 +1,39 @@
+@import '../../style/variables';
+.home {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background: url('../../assets/home/background-home-desktop.jpg') no-repeat center/cover;
+	&-wrapper {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+.main-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 274px;
+	height: 274px;
+	color: #000;
+	background-color: #fff;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	font-size: 32px;
+	line-height: 36px;
+}
+.main-btn:hover {
+	width: 450px;
+	height: 450px;
+	color: #000;
+	background-color: #fff;
+}
+.col-1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 450px;
+	height: 380px;
+}
