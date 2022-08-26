@@ -1,0 +1,13 @@
+.planet {
+	&-tabs {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 1fr;
+		gap: 10px;
+	}
+	&-item {
+		cursor: pointer;
+	}
+}

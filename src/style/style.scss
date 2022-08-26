@@ -1,35 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import './variables';
 body {
 	margin: 0 auto;
-	font-family: 'Bellefair', serif;
-	font-family: 'Barlow Condensed', sans-serif;
-	transition: 0.5s all ease-in;
+	font-family: 'Bellefair', 'Barlow Condensed' serif;
+	transition: 1s all ease;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin: 0;
+		padding: 0;
+	}
+}
+body::-webkit-scrollbar {
+	width: 0;
 }
 * {
 	.heading-1 {
 		font-family: 'Bellefair', serif;
 		font-size: 150px;
+		line-height: 170px;
 		color: $light;
 	}
 	.heading-2 {
 		font-family: 'Bellefair', serif;
 		font-size: 100px;
+		line-height: 115px;
 		color: $light;
 	}
 	.heading-3 {
 		font-family: 'Bellefair', serif;
 		font-size: 56px;
+		line-height: 65px;
 		color: $light;
 	}
 	.heading-4 {
 		font-family: 'Bellefair', serif;
 		font-size: 32px;
+		line-height: 37px;
 		color: $light;
 	}
 	.heading-5 {
 		font-family: 'Barlow Condensed', serif;
 		font-size: 28px;
+		line-height: 34px;
+		letter-spacing: 4.7px;
 		color: $light;
 	}
 	.subheading-1 {
@@ -45,6 +62,12 @@ body {
 	.nav-text {
 		font-family: 'Barlow Condensed', serif;
 		font-size: 16px;
+		color: $medium;
+	}
+	.body-text {
+		font-family: 'Barlow Condensed', serif;
+		font-size: 18px;
+		line-height: 32px;
 		color: $medium;
 	}
 }

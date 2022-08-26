@@ -1,11 +1,26 @@
 import Home from '../home/Home';
 import Destination from '../destination/Destination';
+import Crew from '../crew/Crew';
+import Technology from '../technology/Technology';
 import NavigateMenu from '../navigateMenu/NavigateMenu';
+import data from '../../data.json';
 import { Component } from 'react';
-class App extends Component {
+
+function App() {
+	return (
+		<div className="app">
+			<NavigateMenu />
+			<Home />
+		</div>
+	);
+}
+
+export default App;
+
+/* class App extends Component {
 	state = {
 		select: 0,
-		pages: [<Home />, <Destination />, <Home />, <Home />],
+		pages: [<Home />, <Destination data={data} />, <Crew />, <Technology />],
 	};
 	onPageSelected = (id) => this.setState({ select: id });
 	render() {
@@ -17,6 +32,4 @@ class App extends Component {
 			</div>
 		);
 	}
-}
-
-export default App;
+} */

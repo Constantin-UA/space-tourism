@@ -1,40 +1,35 @@
-import { Component } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+
 import './home.scss';
 
-class Home extends Component {
-	onMouseEnter = () => {
-		const el = document.querySelector('.main-btn-hover');
-		el.classList.add('main-btn-hover-active');
-	};
-	onMouseLeave = () => {
-		const el = document.querySelector('.main-btn-hover');
-		el.classList.remove('main-btn-hover-active');
-	};
-	render() {
-		return (
-			<div className="home">
-				<div className="col-1">
-					<div className="home-subtitle">SO, YOU WANT TO TRAVEL TO</div>
-					<div className="home-title">SPACE</div>
-					<div className="home-subtitle-sub">
-						Let’s face it; if you want to go to space, you might as well genuinely go to outer space
-						and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you
-						a truly out of this world experience!
-					</div>
-				</div>
-				<div className="col-2">
-					<div className="main-btn-hover">
-						<div
-							onMouseEnter={this.onMouseEnter}
-							onMouseLeave={this.onMouseLeave}
-							className="main-btn"
-						>
-							EXPLORE
+function Home() {
+	return (
+		<section className="home">
+			<Container>
+				<Row className="home-wrapper">
+					<Col className="home-left">
+						<div className="home-subtitle heading-5">SO, YOU WANT TO TRAVEL TO</div>
+						<h1 className="home-title heading-1">SPACE</h1>
+						<div className="home-subtitle-sub body-text">
+							Let’s face it; if you want to go to space, you might as well genuinely go to outer
+							space and not hover kind of on the edge of it. Well sit back, and relax because we’ll
+							give you a truly out of this world experience!
 						</div>
-					</div>
-				</div>
-			</div>
-		);
-	}
+					</Col>
+					<Col className="home-right">
+						<MainBtn />
+					</Col>
+				</Row>
+			</Container>
+		</section>
+	);
+}
+
+function MainBtn() {
+	return (
+		<div className="main-btn-hover">
+			<button className="main-btn">EXPLORE</button>;
+		</div>
+	);
 }
 export default Home;
