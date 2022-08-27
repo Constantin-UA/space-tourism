@@ -1,29 +1,28 @@
 import logo from '../../assets/navigateMenu/logo.png';
+import Nav from 'react-bootstrap/Nav';
 import './navigateMenu.scss';
 
-function NavigateMenu() {
+function NavigateMenu(props) {
 	const data = ['HOME', 'DESTINATION', 'CREW', 'TECHNOLOGY'];
 
 	return (
-		<div className="nav">
-			<img src={logo} className="nav-logo" alt="logo" />
-			<ul className="nav-wrapper">
+		<div className="navMain">
+			<img src={logo} className="navMain-logo" alt="logo" />
+			<Nav
+				className="navMain-wrapper"
+				onSelect={(selectedKey) => props.onPageSelected(selectedKey)}
+			>
 				{data.map((el, idx) => {
 					return (
-						<li
-							onClick={(e) => {
-								console.log('Click on:', e.target);
-							}}
-							className="nav-item"
-							data-atr={idx}
-							key={idx}
-						>
-							<span>0{idx}</span>
-							{el}
-						</li>
+						<Nav.Item className="navMain-item" key={idx}>
+							<Nav.Link eventKey={idx}>
+								<span>0{idx}</span>
+								{el}
+							</Nav.Link>
+						</Nav.Item>
 					);
 				})}
-			</ul>
+			</Nav>
 		</div>
 	);
 }

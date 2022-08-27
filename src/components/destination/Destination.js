@@ -1,48 +1,59 @@
-import imgUrl from '../../assets/destination/image-moon.png';
-import tabsline from '../../assets/destination/tabs-line.png';
-import PlanetGroup from '../planetGroup/PlanetGroup';
 import { Container, Row, Col } from 'react-bootstrap';
+import Nav from 'react-bootstrap/Nav';
 import { useCallback, useState, useEffect } from 'react';
+import img from '../../assets/destination/image-moon.png';
 import './destination.scss';
 function Destination(props) {
 	const { name, images, description, distance, travel } = props.data.destinations[0];
 
-	const getImage = useCallback(() => {
-		console.log('fetching');
-
-		return imgUrl;
-	}, [imgUrl]);
-
 	return (
 		<section className="destination">
-			<div className="destination-title heading-5">01 Pick your destination</div>
 			<Container className="destination-wrapper">
+				<div className="destination-title heading-5">01 Pick your destination</div>
 				<Row>
 					<Col className="destination-col-left">
-						<DestinationSlide getImage={getImage} />
+						<img src={img} alt="planet img" className="destination-img" />
 					</Col>
 					<Col className="destination-col-right">
-						<PlanetGroup />
+						<Nav activeKey="MOON" onSelect={(selectedKey) => console.log(selectedKey)}>
+							<Nav.Item>
+								<Nav.Link eventKey="MOON">MOON</Nav.Link>
+							</Nav.Item>
+							<Nav.Item>
+								<Nav.Link eventKey="MARS">MARS</Nav.Link>
+							</Nav.Item>
+							<Nav.Item>
+								<Nav.Link eventKey="EUROPA">EUROPA</Nav.Link>
+							</Nav.Item>
+							<Nav.Item>
+								<Nav.Link eventKey="TITAN">TITAN</Nav.Link>
+							</Nav.Item>
+						</Nav>
+						<div className="destination-descr-wrapper">
+							<div className="destination-descr-title">MOON</div>
+							<div className="destination-descr-text">
+								See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+								regain perspective and come back refreshed. While you’re there, take in some history
+								by visiting the Luna 2 and Apollo 11 landing sites.
+							</div>
+							<br />
+							<div className="destination-descr-footer">
+								<div className="destination-descr-distance">
+									<div className="destination-descr-distance-title">AVG. DISTANCE</div>
+									<div className="destination-descr-distance-subtitle">384,400 KM</div>
+								</div>
+								<div className="destination-descr-time">
+									<div className="destination-descr-time-title">EST. TRAVEL TIME</div>
+									<div className="destination-descr-time-subtitle">3 DAYS</div>
+								</div>
+							</div>
+						</div>
 					</Col>
 				</Row>
 			</Container>
 		</section>
 	);
 }
-
-const DestinationSlide = ({ getImage }) => {
-	const [image, setImage] = useState();
-
-	useEffect(() => {
-		setImage(getImage());
-	}, [getImage]);
-
-	return (
-		<div className="destination-img">
-			<img src={image} alt="planet" />
-		</div>
-	);
-};
 
 export default Destination;
 

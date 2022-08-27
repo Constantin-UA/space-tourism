@@ -4,13 +4,16 @@ import Crew from '../crew/Crew';
 import Technology from '../technology/Technology';
 import NavigateMenu from '../navigateMenu/NavigateMenu';
 import data from '../../data.json';
-import { Component } from 'react';
+import { useState } from 'react';
 
 function App() {
+	const [selectPage, setSelectPage] = useState(0);
+	const pages = [<Home />, <Destination data={data} />];
+	const onPageSelected = (id) => setSelectPage(id);
 	return (
 		<div className="app">
-			<NavigateMenu />
-			<Home />
+			<NavigateMenu onPageSelected={onPageSelected} />
+			{pages[selectPage]}
 		</div>
 	);
 }
