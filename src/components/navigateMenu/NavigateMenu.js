@@ -15,7 +15,7 @@ function NavigateMenu(props) {
 				{data.map((el, idx) => {
 					return (
 						<Nav.Item className="navMain-item" key={idx}>
-							<Nav.Link eventKey={idx}>
+							<Nav.Link eventKey={idx} className="nav-text">
 								<span>0{idx}</span>
 								{el}
 							</Nav.Link>

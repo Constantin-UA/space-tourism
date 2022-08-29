@@ -8,8 +8,8 @@ import { useState } from 'react';
 
 function App() {
 	const [selectPage, setSelectPage] = useState(0);
-	const pages = [<Home />, <Destination data={data} />];
 	const onPageSelected = (id) => setSelectPage(id);
+	const pages = [<Home onPageSelected={onPageSelected} />, <Destination data={data} />];
 	return (
 		<div className="app">
 			<NavigateMenu onPageSelected={onPageSelected} />
@@ -19,20 +19,3 @@ function App() {
 }
 
 export default App;
-
-/* class App extends Component {
-	state = {
-		select: 0,
-		pages: [<Home />, <Destination data={data} />, <Crew />, <Technology />],
-	};
-	onPageSelected = (id) => this.setState({ select: id });
-	render() {
-		let { select, pages } = this.state;
-		return (
-			<div className="App" style={{ position: 'relative' }}>
-				<NavigateMenu onPageSelected={this.onPageSelected} />
-				{pages[select]}
-			</div>
-		);
-	}
-} */

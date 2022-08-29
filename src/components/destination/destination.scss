@@ -12,15 +12,37 @@
 	flex-direction: column;
 	justify-content: center;
 	&-title {
-		margin-bottom: 95px;
+		margin-bottom: 50px;
+		margin-left: 150px;
 	}
 	&-wrapper {
 		display: flex;
 		flex-direction: column;
-		margin-top: 10vh;
+		margin-top: 210px;
 	}
-	&-col-right {
+	&-row-wrapper {
+		display: grid;
+		grid-template-columns: 445px 445px;
+		justify-content: space-evenly;
+	}
+	&-col-right,
+	&-col-left {
 		display: flex;
 		flex-direction: column;
 	}
+	&-descr-wrapper {
+		display: flex;
+		flex-direction: column;
+		row-gap: 45px;
+	}
+	&-descr-footer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	&-nav-item:hover {
+		border-bottom: 1px solid $medium;
+	}
+}
+.nav {
+	--bs-nav-link-hover-color: $medium;
 }

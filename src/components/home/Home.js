@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import './home.scss';
 
-function Home() {
+function Home(props) {
 	return (
 		<section className="home">
 			<Container>
@@ -17,7 +17,7 @@ function Home() {
 						</div>
 					</Col>
 					<Col className="home-right">
-						<MainBtn />
+						<MainBtn onPageSelected={props.onPageSelected} />
 					</Col>
 				</Row>
 			</Container>
@@ -25,10 +25,13 @@ function Home() {
 	);
 }
 
-function MainBtn() {
+function MainBtn(props) {
 	return (
 		<div className="main-btn-hover">
-			<button className="main-btn">EXPLORE</button>;
+			<button onClick={() => props.onPageSelected(1)} className="main-btn">
+				EXPLORE
+			</button>
+			;
 		</div>
 	);
 }
