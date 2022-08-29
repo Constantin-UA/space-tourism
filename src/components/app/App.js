@@ -9,7 +9,11 @@ import { useState } from 'react';
 function App() {
 	const [selectPage, setSelectPage] = useState(0);
 	const onPageSelected = (id) => setSelectPage(id);
-	const pages = [<Home onPageSelected={onPageSelected} />, <Destination data={data} />];
+	const pages = [
+		<Home onPageSelected={onPageSelected} />,
+		<Destination data={data} />,
+		<Crew data={data} />,
+	];
 	return (
 		<div className="app">
 			<NavigateMenu onPageSelected={onPageSelected} />
