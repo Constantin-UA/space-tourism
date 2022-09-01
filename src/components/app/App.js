@@ -13,6 +13,7 @@ function App() {
 		<Home onPageSelected={onPageSelected} />,
 		<Destination data={data} />,
 		<Crew data={data} />,
+		<Technology data={data} />,
 	];
 	return (
 		<div className="app">

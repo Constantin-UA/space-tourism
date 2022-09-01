@@ -1,0 +1,70 @@
+@import '../../style/_variables';
+
+.technology {
+	color: $light;
+	height: 100%;
+	width: 100%;
+	background-image: url('../../assets/technology/background-technology-desktop.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	&-container {
+		padding-right: 0px;
+		margin-right: 0px;
+	}
+	&-title {
+		margin-top: 200px;
+	}
+	&-wrapper {
+		margin-top: 130px;
+		display: flex;
+		column-gap: 100px;
+	}
+	&-left-col {
+		display: grid;
+		grid-template-columns: 85px auto;
+		grid-template-rows: 310px auto;
+		column-gap: 80px;
+	}
+	&-left-left-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&-left-right-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		width: 470px;
+	}
+	&-right-col {
+		position: relative;
+		width: 515px;
+		height: 530px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&-button {
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		font-size: 32px;
+		color: $light;
+		border: 1px solid rgba($color: $light, $alpha: 0.2);
+		background-color: rgba($color: $dark, $alpha: 1);
+	}
+	&-button:hover {
+		border: 1px solid rgba($color: $light, $alpha: 1);
+	}
+}
+.active-btn {
+	color: $dark;
+	background-color: rgba($color: $light, $alpha: 1);
+	border: 1px solid $dark;
+}
