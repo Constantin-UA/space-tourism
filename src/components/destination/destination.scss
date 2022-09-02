@@ -46,3 +46,34 @@
 .nav {
 	--bs-nav-link-hover-color: $medium;
 }
+
+@media screen and (max-width: 768px) {
+	.destination {
+		background-image: url('../../assets/destination/background-destination-tablet.jpg');
+		&-wrapper {
+			margin-top: 136px;
+			align-items: center;
+			text-align: center;
+			row-gap: 60px;
+		}
+		&-title {
+			margin: auto;
+			margin-left: 0px;
+		}
+		&-row-wrapper {
+			display: grid;
+			grid-template-columns: 575px;
+		}
+		&-col-left {
+			width: 300px;
+			height: 300px;
+			justify-self: center;
+		}
+		&-nav {
+			justify-content: center;
+		}
+		&-descr-wrapper {
+			row-gap: 30px;
+		}
+	}
+}

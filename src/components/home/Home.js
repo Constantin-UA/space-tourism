@@ -4,7 +4,7 @@ import './home.scss';
 
 function Home(props) {
 	return (
-		<section className="home">
+		<section className="home" id="home">
 			<Container>
 				<Row className="home-wrapper">
 					<Col className="home-left">

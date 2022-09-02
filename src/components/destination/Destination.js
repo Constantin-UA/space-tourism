@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
-import { useCallback, useState, useEffect, useMemo } from 'react';
+import { useState } from 'react';
 import moonImg from '../../assets/destination/image-moon.png';
 import marsImg from '../../assets/destination/image-mars.png';
 import europaImg from '../../assets/destination/image-europa.png';
@@ -11,21 +11,20 @@ function Destination(props) {
 	const imgPlanets = [moonImg, marsImg, europaImg, titanImg];
 	const { name, description, distance, travel } = props.data.destinations[planet];
 	const navItem = ['MOON', 'MARS', 'EUROPA', 'TITAN'];
+	console.log(name);
 	return (
-		<section className="destination">
+		<section className="destination" id="destination">
 			<Container className="destination-wrapper">
-				<div className="destination-title heading-5">01 Pick your destination</div>
+				<div className="destination-title heading-5">01 PICK YOUR DESTINATION</div>
 				<Row className="destination-row-wrapper">
 					<Col className="destination-col-left">
-						<img src={imgPlanets[planet]} alt="planet img" className="destination-img" />;
+						<img src={imgPlanets[planet]} alt="planet img" className="destination-img" />
 					</Col>
 					<Col className="destination-col-right">
-						<Nav
-							className="destination-nav"
-							activeKey={name}
-							onSelect={(selectedKey) => setPlanet(selectedKey)}
-						>
+						<Nav className="destination-nav" onSelect={(selectedKey) => setPlanet(selectedKey)}>
 							{navItem.map((item, idx) => {
+								if (idx === 0) {
+								}
 								return (
 									<Nav.Item className="destination-nav-item" key={idx}>
 										<Nav.Link className="destination-nav-item-link nav-text" eventKey={idx}>

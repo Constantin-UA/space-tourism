@@ -13,9 +13,9 @@ const Crew = (props) => {
 	const crewImgs = [capImg, specialistImg, pilotImg, engineerImg];
 	const { name, role, bio } = props.data.crew[crewSelect];
 	return (
-		<section className="crew">
+		<section className="crew" id="crew">
 			<Container className="crew-wrapper">
-				<div className="crew-title heading-5">02 Meet your crew</div>
+				<div className="crew-title heading-5">02 MEET YOUR CREW</div>
 				<Row className="crew-row-wrapper">
 					<Col className="crew-col-left">
 						<div className="crew-wrapper-descrip">

@@ -1,0 +1,6 @@
+tablet
+[x] 1) настроить @media screen and (max-width: 768px) страницу Home
+[x] 2) настроить @media screen and (max-width: 768px) страницу Destination
+[x] 3) настроить @media screen and (max-width: 768px) страницу Crew
+[] 4) настроить @media screen and (max-width: 768px) страницу Technology
+[] 5) настроить @media screen and (max-width: 768px) Menu

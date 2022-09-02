@@ -1,7 +1,8 @@
 @import '../../style/variables.scss';
 
 .navMain {
-	position: fixed;
+	position: absolute;
+	z-index: 50;
 	top: 40px;
 	font-family: 'Barlow Condensed', serif;
 	width: 100%;
@@ -23,7 +24,7 @@
 		transition: 1s all ease;
 	}
 	&-line {
-		width: 470px;
+		width: 60vw;
 		height: 1px;
 	}
 	&-logo {
@@ -49,5 +50,23 @@
 	}
 	&-item-active {
 		border-bottom: 1px solid $light;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.navMain {
+		top: 0px;
+		&-wrapper {
+			width: 450px;
+		}
+	}
+	.nav-text {
+		font-size: 14px;
+		line-height: 17px;
+		span {
+			margin-right: 0px;
+
+			visibility: hidden;
+		}
 	}
 }

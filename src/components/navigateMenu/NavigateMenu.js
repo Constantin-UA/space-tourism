@@ -4,6 +4,7 @@ import './navigateMenu.scss';
 
 function NavigateMenu(props) {
 	const data = ['HOME', 'DESTINATION', 'CREW', 'TECHNOLOGY'];
+	const dataHref = ['#HOME', '#DESTINATION', '#CREW', '#TECHNOLOGY'];
 
 	return (
 		<div className="navMain">
@@ -15,7 +16,7 @@ function NavigateMenu(props) {
 				{data.map((el, idx) => {
 					return (
 						<Nav.Item className="navMain-item" key={idx}>
-							<Nav.Link eventKey={idx} className="nav-text">
+							<Nav.Link href={dataHref[idx].toLowerCase()} eventKey={idx} className="nav-text">
 								<span>0{idx}</span>
 								{el}
 							</Nav.Link>
