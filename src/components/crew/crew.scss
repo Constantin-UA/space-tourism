@@ -110,3 +110,44 @@
 		}
 	}
 }
+
+@media screen and (max-width: 375px) {
+	.crew {
+		background-image: url('../../assets/crew/background-crew-tablet.jpg');
+		&-title {
+			position: unset;
+			margin: 0 auto;
+		}
+		&-wrapper {
+			margin: 88px auto;
+		}
+		&-row-wrapper {
+			display: grid;
+			grid-template-columns: 320px;
+			grid-template-rows: auto;
+			margin-top: 32px;
+			row-gap: 40px;
+			grid-template-areas:
+				'up'
+				'down';
+		}
+		&-col-left {
+			grid-area: down;
+		}
+		&-col-right {
+			margin: 0 auto;
+			width: 175px;
+			grid-area: up;
+		}
+		&-name {
+			margin-bottom: 16px;
+		}
+		&-nav {
+			width: 88px;
+			height: 15px;
+		}
+		&-bio {
+			padding: 5px;
+		}
+	}
+}

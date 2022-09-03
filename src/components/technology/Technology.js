@@ -9,7 +9,6 @@ function Technology(props) {
 	const onClick = (e) => {
 		let value = e.target.innerHTML - 1;
 		setSelectKey(value);
-
 		switchButton(e, 'active-btn');
 		switchClassImg(value, '.technology-right');
 	};

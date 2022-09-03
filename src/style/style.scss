@@ -90,9 +90,64 @@ body::-webkit-scrollbar {
 		font-size: 40px;
 		line-height: 46px;
 	}
+	.heading-1 {
+		line-height: 150px;
+	}
+	.subheading-2 {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.subheading-1 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.nav-text {
+		font-size: 14px;
+		line-height: 17px;
+		span {
+			margin-right: 0px;
+			visibility: hidden;
+		}
+	}
 	.body-text {
 		font-size: 16px;
 		line-height: 28px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.heading-1 {
+		font-size: 80px;
+		line-height: 100px;
+	}
+	.heading-2 {
+		font-size: 56px;
+		line-height: 84px;
+	}
+	.heading-3 {
+		font-size: 24px;
+		line-height: 27px;
+	}
+	.heading-4 {
+		font-size: 16px;
+		line-height: 18px;
+	}
+	.heading-5 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.subheading-2 {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.subheading-1 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.body-text {
+		font-size: 15px;
+		line-height: 25px;
 		text-align: center;
 	}
 }

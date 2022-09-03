@@ -61,10 +61,7 @@
 			max-width: 450px;
 			justify-content: center;
 			flex-direction: column;
-			margin: 200px auto;
-		}
-		&-title {
-			line-height: 150px;
+			margin: 200px auto 0px;
 		}
 	}
 	.main-btn {
@@ -72,5 +69,31 @@
 		height: 242px;
 		font-size: 32px;
 		line-height: 37px;
+	}
+}
+@media screen and (max-width: 375px) {
+	.home {
+		background-image: url('../../assets/home/background-home-mobile.jpg');
+		&-wrapper {
+			align-items: center;
+			text-align: center;
+			max-width: 450px;
+			justify-content: center;
+			flex-direction: column;
+			margin: 112px auto 0px;
+		}
+		&-right {
+			justify-content: center;
+		}
+	}
+	.main-btn {
+		width: 150px;
+		height: 150px;
+		font-size: 20px;
+		line-height: 22px;
+	}
+	.main-btn-hover {
+		width: 250px;
+		height: 250px;
 	}
 }

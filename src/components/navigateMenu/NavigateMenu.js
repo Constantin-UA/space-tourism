@@ -9,6 +9,11 @@ function NavigateMenu(props) {
 	return (
 		<div className="navMain">
 			<img src={logo} className="navMain-logo" alt="logo" />
+			<button className="navMain-hamburger">
+				<span className="navMain-line"></span>
+				<span className="navMain-line"></span>
+				<span className="navMain-line"></span>
+			</button>
 			<Nav
 				className="navMain-wrapper"
 				onSelect={(selectedKey) => props.onPageSelected(selectedKey)}
