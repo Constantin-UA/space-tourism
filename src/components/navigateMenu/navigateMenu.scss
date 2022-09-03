@@ -12,23 +12,7 @@
 	justify-content: space-between;
 	padding-left: 55px;
 	align-items: center;
-	&-hamburger {
-		position: absolute;
-		right: 25px;
-		width: 25px;
-		height: 20px;
-		background-color: rgba($color: #000000, $alpha: 0.1);
-		border: none;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		row-gap: 6px;
-	}
-	&-line {
-		border: 2px solid #d0d6f9;
-		width: 24px;
-	}
+
 	&-wrapper {
 		background: url('../../assets/navigateMenu/bg.png');
 		display: flex;
@@ -38,7 +22,6 @@
 		align-items: center;
 		width: 830px;
 		height: 100px;
-		transition: 1s all ease;
 	}
 	&-logo {
 		width: 50px;
@@ -50,8 +33,8 @@
 		align-items: center;
 		list-style-type: none;
 		color: $medium;
-		height: 98px;
 		cursor: pointer;
+		height: 98px;
 		span {
 			margin-right: 10px;
 			color: $light;
@@ -68,9 +51,15 @@
 
 @media screen and (max-width: 768px) {
 	.navMain {
+		padding-left: 2vw;
 		top: 0px;
 		&-wrapper {
-			width: 450px;
+			max-width: 450px;
+		}
+	}
+	.nav-text {
+		span {
+			position: absolute;
 		}
 	}
 }

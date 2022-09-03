@@ -1,5 +1,6 @@
 import logo from '../../assets/navigateMenu/logo.png';
 import Nav from 'react-bootstrap/Nav';
+import OffcanvasRight from '../offcanvasRight/OffcanvasRight';
 import './navigateMenu.scss';
 
 function NavigateMenu(props) {
@@ -9,11 +10,8 @@ function NavigateMenu(props) {
 	return (
 		<div className="navMain">
 			<img src={logo} className="navMain-logo" alt="logo" />
-			<button className="navMain-hamburger">
-				<span className="navMain-line"></span>
-				<span className="navMain-line"></span>
-				<span className="navMain-line"></span>
-			</button>
+			<OffcanvasRight onPageSelected={props.onPageSelected} />
+
 			<Nav
 				className="navMain-wrapper"
 				onSelect={(selectedKey) => props.onPageSelected(selectedKey)}
@@ -34,28 +32,3 @@ function NavigateMenu(props) {
 }
 
 export default NavigateMenu;
-
-/* return (
-	<div className="nav">
-		<img src={logo} className="nav-logo" alt="logo" />
-		<img src={line} className="nav-line" alt="logo" />
-		<ul className="nav-wrapper">
-			{this.state.data.map((el, idx) => {
-				return (
-					<li
-						onClick={(e) => {
-							this.onClick(e);
-							this.props.onPageSelected(idx);
-						}}
-						className="nav-item"
-						data-atr={idx}
-						key={idx}
-					>
-						<span>0{idx}</span>
-						{el}
-					</li>
-				);
-			})}
-		</ul>
-	</div>
-); */

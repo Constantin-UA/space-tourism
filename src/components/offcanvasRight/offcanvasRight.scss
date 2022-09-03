@@ -1,0 +1,59 @@
+@import '../../style/variables';
+.offcanvas {
+	width: 70vw !important;
+	background: rgba(255, 255, 255, 0.04);
+	backdrop-filter: blur(81.5485px);
+	color: $light;
+}
+.offcanvasRight {
+	&-hamburger {
+		visibility: hidden;
+		position: absolute;
+		right: 25px;
+		width: 25px;
+		height: 20px;
+		background-color: rgba($color: #000000, $alpha: 0.1);
+		border: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		row-gap: 6px;
+	}
+	&-line {
+		border: 2px solid #d0d6f9;
+		width: 24px;
+	}
+	&-header {
+		justify-content: end;
+	}
+}
+.navRight {
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+		row-gap: 15px;
+	}
+	&-text {
+		font-family: 'Barlow Condensed', serif;
+		font-size: 16px;
+		line-height: 19px;
+		list-style-type: none;
+		color: $medium;
+		cursor: pointer;
+		span {
+			margin-right: 10px;
+			color: $light;
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.offcanvasRight {
+		&-hamburger {
+			visibility: visible;
+		}
+	}
+}

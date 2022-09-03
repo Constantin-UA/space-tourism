@@ -10,4 +10,7 @@ Mobile
 [x] 2) настроить @media screen and (max-width: 768px) страницу Destination
 [x] 3) настроить @media screen and (max-width: 768px) страницу Crew
 [x] 4) настроить @media screen and (max-width: 768px) страницу Technology
-[] 6) настроить кнопку в Menu
+[x] 6) настроить кнопку в Menu
+
+desctop
+[]
