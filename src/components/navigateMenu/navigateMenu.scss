@@ -22,6 +22,7 @@
 		align-items: center;
 		width: 830px;
 		height: 100px;
+		list-style-type: none;
 	}
 	&-logo {
 		width: 50px;
@@ -35,10 +36,6 @@
 		color: $medium;
 		cursor: pointer;
 		height: 98px;
-		span {
-			margin-right: 10px;
-			color: $light;
-		}
 		border-bottom: none;
 	}
 	&-item:hover {
@@ -47,6 +44,19 @@
 	&-item-active {
 		border-bottom: 1px solid $light;
 	}
+}
+.nav-text {
+	text-decoration: none;
+	span {
+		margin-right: 10px;
+		color: $light;
+	}
+}
+.nav-text:hover {
+	color: $light;
+}
+.selected {
+	color: $light;
 }
 
 @media screen and (max-width: 768px) {

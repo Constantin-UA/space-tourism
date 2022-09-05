@@ -39,12 +39,14 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
-	&-nav-item:hover {
-		border-bottom: 1px solid $medium;
+	&-nav {
+		display: flex;
+		list-style-type: none;
+		justify-content: start;
+		align-items: center;
+		column-gap: 5vw;
+		padding: 0;
 	}
-}
-.nav {
-	--bs-nav-link-hover-color: $medium;
 }
 
 @media screen and (max-width: 768px) {

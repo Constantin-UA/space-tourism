@@ -4,21 +4,22 @@ import Crew from '../crew/Crew';
 import Technology from '../technology/Technology';
 import NavigateMenu from '../navigateMenu/NavigateMenu';
 import data from '../../data.json';
-import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-	const [selectPage, setSelectPage] = useState(0);
-	const onPageSelected = (id) => setSelectPage(id);
-	const pages = [
-		<Home onPageSelected={onPageSelected} />,
-		<Destination data={data} />,
-		<Crew data={data} />,
-		<Technology data={data} />,
-	];
 	return (
 		<div className="app">
-			<NavigateMenu onPageSelected={onPageSelected} />
-			{pages[selectPage]}
+			<Router>
+				<NavigateMenu />
+				<main>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/destination/*" element={<Destination data={data} />} />
+						<Route path="/crew" element={<Crew data={data} />} />
+						<Route path="/technology" element={<Technology data={data} />} />
+					</Routes>
+				</main>
+			</Router>
 		</div>
 	);
 }

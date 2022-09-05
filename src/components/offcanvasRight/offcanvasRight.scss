@@ -3,7 +3,7 @@
 	width: 70vw !important;
 	background: rgba(255, 255, 255, 0.04);
 	backdrop-filter: blur(81.5485px);
-	color: $light;
+	color: $medium;
 }
 .offcanvasRight {
 	&-hamburger {
@@ -35,13 +35,14 @@
 		align-items: start;
 		justify-content: center;
 		row-gap: 15px;
+		list-style-type: none;
 	}
 	&-text {
 		font-family: 'Barlow Condensed', serif;
 		font-size: 16px;
 		line-height: 19px;
 		list-style-type: none;
-		color: $medium;
+		text-decoration: none;
 		cursor: pointer;
 		span {
 			margin-right: 10px;

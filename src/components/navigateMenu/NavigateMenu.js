@@ -1,32 +1,34 @@
 import logo from '../../assets/navigateMenu/logo.png';
-import Nav from 'react-bootstrap/Nav';
+
 import OffcanvasRight from '../offcanvasRight/OffcanvasRight';
+import { NavLink } from 'react-router-dom';
 import './navigateMenu.scss';
 
 function NavigateMenu(props) {
 	const data = ['HOME', 'DESTINATION', 'CREW', 'TECHNOLOGY'];
-	const dataHref = ['#HOME', '#DESTINATION', '#CREW', '#TECHNOLOGY'];
+	const dataHref = ['/', '/destination', '/crew', '/technology'];
 
 	return (
 		<div className="navMain">
 			<img src={logo} className="navMain-logo" alt="logo" />
-			<OffcanvasRight onPageSelected={props.onPageSelected} />
+			<OffcanvasRight dataHref={dataHref} />
 
-			<Nav
-				className="navMain-wrapper"
-				onSelect={(selectedKey) => props.onPageSelected(selectedKey)}
-			>
+			<ul className="navMain-wrapper">
 				{data.map((el, idx) => {
 					return (
-						<Nav.Item className="navMain-item" key={idx}>
-							<Nav.Link href={dataHref[idx].toLowerCase()} eventKey={idx} className="nav-text">
+						<li className="navMain-item" key={idx}>
+							<NavLink
+								style={({ isActive }) => ({ color: isActive ? '#fff' : 'inherit' })}
+								to={dataHref[idx]}
+								className="nav-text"
+							>
 								<span>0{idx}</span>
 								{el}
-							</Nav.Link>
-						</Nav.Item>
+							</NavLink>
+						</li>
 					);
 				})}
-			</Nav>
+			</ul>
 		</div>
 	);
 }

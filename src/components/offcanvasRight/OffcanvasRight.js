@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Nav from 'react-bootstrap/Nav';
+import { NavLink } from 'react-router-dom';
 
 import './offcanvasRight.scss';
 function OffcanvasRight(props) {
@@ -9,7 +9,6 @@ function OffcanvasRight(props) {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	const data = ['HOME', 'DESTINATION', 'CREW', 'TECHNOLOGY'];
-	const dataHref = ['#HOME', '#DESTINATION', '#CREW', '#TECHNOLOGY'];
 	return (
 		<>
 			<button className="offcanvasRight-hamburger" onClick={handleShow}>
@@ -25,25 +24,22 @@ function OffcanvasRight(props) {
 					closeVariant="white"
 				></Offcanvas.Header>
 				<Offcanvas.Body>
-					<Nav
-						className="navRight-wrapper"
-						onSelect={(selectedKey) => props.onPageSelected(selectedKey)}
-					>
+					<ul className="navRight-wrapper">
 						{data.map((el, idx) => {
 							return (
-								<Nav.Item className="navRight-item" key={idx}>
-									<Nav.Link
-										href={dataHref[idx].toLowerCase()}
-										eventKey={idx}
+								<li className="navRight-item" key={idx}>
+									<NavLink
+										style={({ isActive }) => ({ color: isActive ? '#fff' : 'inherit' })}
+										to={props.dataHref[idx]}
 										className="navRight-text"
 									>
 										<span>0{idx}</span>
 										{el}
-									</Nav.Link>
-								</Nav.Item>
+									</NavLink>
+								</li>
 							);
 						})}
-					</Nav>
+					</ul>
 				</Offcanvas.Body>
 			</Offcanvas>
 		</>

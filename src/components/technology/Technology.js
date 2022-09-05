@@ -1,5 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import imgT1 from '../../assets/technology/image-launch-vehicle-portrait.jpg';
 import imgT2 from '../../assets/technology/image-space-capsule-portrait.jpg';
 import imgT3 from '../../assets/technology/image-spaceport-portrait.jpg';
