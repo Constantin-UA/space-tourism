@@ -1,7 +1,7 @@
 @import '../../style/variables.scss';
 .home {
 	font-family: 'Bellefair', serif;
-	height: 100vh;
+	min-height: 900px;
 	width: 100vw;
 	background-image: url('../../assets/home/background-home-desktop.jpg');
 	background-position: center;
